@@ -7,7 +7,6 @@ import styles from '../styles/header.module.css'
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
   { label: 'Blog', page: '/blog' },
-  { label: 'Contact', page: '/contact' },
 ]
 
 const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
@@ -18,14 +17,17 @@ export default ({ titlePre = '' }) => {
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} My Notion Blog</title>
+        <title>{titlePre ? `${titlePre} |` : ''} Riku Sugawara Blog</title>
         <meta
           name="description"
-          content="An example Next.js site using Notion for the blog"
+          content="東京・横浜で活動するフリーランスデザイナー兼フロントエンジニアのブログ"
         />
-        <meta name="og:title" content="My Notion Blog" />
+        <meta
+          name="og:title"
+          content="東京・横浜で活動するフリーランスデザイナー兼フロントエンジニアのブログ"
+        />
         <meta property="og:image" content={ogImageUrl} />
-        <meta name="twitter:site" content="@_ijjk" />
+        <meta name="twitter:site" content="@fabrec_jp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
